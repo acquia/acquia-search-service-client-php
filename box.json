@@ -1,0 +1,26 @@
+{
+    "chmod": "0755",
+    "directories": ["src"],
+    "files": [
+        "bin/acquia-search-service.php",
+        "LICENSE",
+        "vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "phing",
+                "test",
+                "tests",
+                "Test",
+                "Tests",
+                "Tester"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "main": "bin/acquia-search-service",
+    "output": "build/acquia-search-service.phar",
+    "stub": true
+}

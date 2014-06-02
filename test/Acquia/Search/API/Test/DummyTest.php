@@ -2,7 +2,7 @@
 
 namespace Acquia\Search\API\Test;
 
-use Acquia\Search\API\AcquiaSearchServiceClientPhp;
+use Acquia\Search\API\SearchServiceClient;
 
 class DummyTest extends \PHPUnit_Framework_TestCase
 {
@@ -14,7 +14,7 @@ class DummyTest extends \PHPUnit_Framework_TestCase
      */
     public function testAutoload()
     {
-        $class = new AcquiaSearchServiceClientPhp();
+        $class = new SearchServiceClient();
         $this->assertTrue($class->autoloaded());
     }
 }
