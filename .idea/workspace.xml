@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="370112b8-69ba-4c84-b303-a3a346bc4f79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/IdentityRemoveCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/IndexCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Ping.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/PingCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceApplication.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Signature.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/acquia-search-service.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/acquia-search-service" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/box.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/travis.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Acquia/Search/API/AcquiaSearchServiceClientPhp.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/acquia-search-service-client-php.iml" afterPath="$PROJECT_DIR$/.idea/acquia-search-service-client-php.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Acquia/Search/API/Test/DummyTest.php" afterPath="$PROJECT_DIR$/test/Acquia/Search/API/Test/DummyTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateProtwordsCommand.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Console/JsonHelper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Protwords.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Stopwords.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Suggestions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Response/Synonyms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Acquia/Search/API/Signature.php" afterPath="$PROJECT_DIR$/src/Acquia/Search/API/Signature.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/acquia-search-service.php" afterPath="$PROJECT_DIR$/bin/acquia-search-service.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="acquia-search-service-client-php.iws" />
@@ -43,29 +35,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PingCommand.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/PingCommand.php">
+      <file leaf-file-name="ProtwordsCommand.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/ProtwordsCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="10" selection-start="162" selection-end="162" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="420">
+            <state line="12" column="23" selection-start="284" selection-end="284" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acquia-search-service.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/acquia-search-service.php">
+      <file leaf-file-name="SearchServiceClient.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="333" selection-end="333" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="405">
+            <state line="142" column="55" selection-start="4085" selection-end="4085" vertical-scroll-proportion="0.3181818" vertical-offset="2004" max-vertical-offset="2520">
+              <folding>
+                <element signature="e#37#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Protwords.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Protwords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="15" selection-start="61" selection-end="61" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acquia-search-service" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/acquia-search-service">
+      <file leaf-file-name="Stopwords.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Stopwords.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="36" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+            <state line="4" column="15" selection-start="61" selection-end="61" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Suggestions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Suggestions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="17" selection-start="63" selection-end="63" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Synonyms.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Synonyms.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="14" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchServiceAuthPlugin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="49" selection-start="4004" selection-end="4004" vertical-scroll-proportion="-6.6666665" vertical-offset="2015" max-vertical-offset="2580">
+              <folding>
+                <element signature="e#37#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,7 +105,7 @@
       <file leaf-file-name="SearchServiceApplication.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceApplication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="540">
+            <state line="6" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="2.6666667" vertical-offset="154" max-vertical-offset="540">
               <folding>
                 <element signature="e#45#76#0" expanded="true" />
               </folding>
@@ -84,58 +116,16 @@
       <file leaf-file-name="SearchServiceCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="0" selection-start="2652" selection-end="2652" vertical-scroll-proportion="-36.875" vertical-offset="345" max-vertical-offset="1500">
-              <folding>
-                <element signature="e#45#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchServiceClient.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="46" selection-start="343" selection-end="343" vertical-scroll-proportion="23.75" vertical-offset="780" max-vertical-offset="1710">
-              <folding>
-                <element signature="e#37#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="5" selection-start="487" selection-end="487" vertical-scroll-proportion="-13.666667" vertical-offset="167" max-vertical-offset="600">
+            <state line="4" column="42" selection-start="87" selection-end="87" vertical-scroll-proportion="27.666666" vertical-offset="724" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ping.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Ping.php">
+      <file leaf-file-name="acquia-search-service.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/acquia-search-service.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="10" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchServiceAuthPlugin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="56" selection-start="2343" selection-end="2343" vertical-scroll-proportion="3.1" vertical-offset="1790" max-vertical-offset="2580">
-              <folding>
-                <element signature="e#37#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Signature.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Signature.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="20" selection-start="801" selection-end="801" vertical-scroll-proportion="0.85330075" vertical-offset="266" max-vertical-offset="750">
+            <state line="32" column="42" selection-start="1041" selection-end="1041" vertical-scroll-proportion="-15.791667" vertical-offset="101" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -167,13 +157,30 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceCommand.php" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/IndexCommand.php" />
-        <option value="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php" />
-        <option value="$PROJECT_DIR$/bin/acquia-search-service.php" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/Response/Ping.php" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/PingCommand.php" />
-        <option value="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/JsonHelper.php" />
+        <option value="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php" />
         <option value="$PROJECT_DIR$/src/Acquia/Search/API/Signature.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateProtwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateStopwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateSuggestionsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateSynonymsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteProtwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteStopwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteSuggestionsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteSynonymsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/ProtwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/StopwordsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/SuggestionsCommand.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Console/SynonymsCommand.php" />
+        <option value="$PROJECT_DIR$/bin/acquia-search-service.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Response/Protwords.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Response/Stopwords.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Response/Suggestions.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/Response/Synonyms.php" />
+        <option value="$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php" />
       </list>
     </option>
   </component>
@@ -280,6 +287,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Response" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="acquia-search-service-client-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="acquia-search-service-client-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Acquia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Console" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -322,6 +359,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="Cr" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -452,15 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/IdentityRemoveCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="-7.5416665" vertical-offset="59" max-vertical-offset="510">
-          <folding>
-            <element signature="e#45#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-10.111111" vertical-offset="117" max-vertical-offset="510">
@@ -469,13 +498,6 @@
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="9" selection-start="3715" selection-end="3715" vertical-scroll-proportion="-8.7" vertical-offset="960" max-vertical-offset="4620">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Md5/Md5ValidatorPlugin.php">
@@ -489,15 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="63" selection-start="922" selection-end="953" vertical-scroll-proportion="-6.2916665" vertical-offset="179" max-vertical-offset="915">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/IndexCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="625" selection-end="625" vertical-scroll-proportion="-12.416667" vertical-offset="17" max-vertical-offset="435">
-          <folding>
-            <element signature="e#45#96#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -522,60 +535,206 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/JsonHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="432" selection-end="432" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="480">
+          <folding>
+            <element signature="e#45#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Plugin/Oauth/OauthPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="9" selection-start="3715" selection-end="3715" vertical-scroll-proportion="-6.0" vertical-offset="1251" max-vertical-offset="4575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Signature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="553" selection-end="553" vertical-scroll-proportion="-11.416667" vertical-offset="236" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/PingCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="331" selection-end="331" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/IdentityRemoveCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="-7.5416665" vertical-offset="59" max-vertical-offset="510">
+          <folding>
+            <element signature="e#45#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/IndexCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="49" selection-start="537" selection-end="559" vertical-scroll-proportion="-12.416667" vertical-offset="2" max-vertical-offset="435">
+          <folding>
+            <element signature="e#45#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateProtwordsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.3333333" vertical-offset="10" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateStopwordsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.4583335" vertical-offset="10" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateSuggestionsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="292" selection-end="292" vertical-scroll-proportion="-6.4583335" vertical-offset="25" max-vertical-offset="435">
+          <folding>
+            <element signature="e#45#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/CreateSynonymsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="289" selection-end="289" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteProtwordsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteStopwordsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteSuggestionsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="292" selection-end="292" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/DeleteSynonymsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="289" selection-end="289" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/StopwordsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="284" selection-end="284" vertical-scroll-proportion="-6.4583335" vertical-offset="10" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SuggestionsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="286" selection-end="286" vertical-scroll-proportion="-6.4583335" vertical-offset="10" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SynonymsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="90" selection-start="384" selection-end="384" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceApplication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="540">
+        <state line="6" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="2.6666667" vertical-offset="154" max-vertical-offset="540">
           <folding>
             <element signature="e#45#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/PingCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="10" selection-start="162" selection-end="162" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/SearchServiceCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="2652" selection-end="2652" vertical-scroll-proportion="-36.875" vertical-offset="345" max-vertical-offset="1500">
-          <folding>
-            <element signature="e#45#87#0" expanded="true" />
-          </folding>
+        <state line="4" column="42" selection-start="87" selection-end="87" vertical-scroll-proportion="27.666666" vertical-offset="724" max-vertical-offset="1500">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/acquia-search-service.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="333" selection-end="333" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="405">
+        <state line="32" column="42" selection-start="1041" selection-end="1041" vertical-scroll-proportion="-15.791667" vertical-offset="101" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php">
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Console/ProtwordsCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="343" selection-end="343" vertical-scroll-proportion="23.75" vertical-offset="780" max-vertical-offset="1710">
-          <folding>
-            <element signature="e#37#73#0" expanded="true" />
-          </folding>
+        <state line="12" column="23" selection-start="284" selection-end="284" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Protwords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="15" selection-start="61" selection-end="61" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Stopwords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="15" selection-start="61" selection-end="61" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Suggestions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="63" selection-end="63" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Response/Synonyms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceAuthPlugin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="56" selection-start="2343" selection-end="2343" vertical-scroll-proportion="3.1" vertical-offset="1790" max-vertical-offset="2580">
+        <state line="145" column="49" selection-start="4004" selection-end="4004" vertical-scroll-proportion="-6.6666665" vertical-offset="2015" max-vertical-offset="2580">
           <folding>
             <element signature="e#37#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/Signature.php">
+    <entry file="file://$PROJECT_DIR$/src/Acquia/Search/API/SearchServiceClient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="20" selection-start="801" selection-end="801" vertical-scroll-proportion="0.85330075" vertical-offset="266" max-vertical-offset="750">
-          <folding />
+        <state line="142" column="55" selection-start="4085" selection-end="4085" vertical-scroll-proportion="0.3181818" vertical-offset="2004" max-vertical-offset="2520">
+          <folding>
+            <element signature="e#37#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

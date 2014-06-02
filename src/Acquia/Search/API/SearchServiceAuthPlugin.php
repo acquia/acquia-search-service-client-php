@@ -135,7 +135,7 @@ class SearchServiceAuthPlugin implements EventSubscriberInterface
         }
 
         // Add the URL
-        $sign .= $request->getResource() . "\n";
+        $sign .= $request->getResource();
 
         // The concatenation that is needed to generate our derived key. Predefined syntax
         $derivation_string = $this->getSearchIdentifier() . 'solr' . $this->getNetworkSalt();

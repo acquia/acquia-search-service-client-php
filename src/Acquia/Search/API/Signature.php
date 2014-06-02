@@ -33,13 +33,6 @@ class Signature extends SignatureAbstract
      */
     public function generate($content)
     {
-        print "secret\n";
-        print $this->getSecretKey();
-        print "\ncanonical representation\n";
-        print $content;
-        $hash = hash_hmac('sha1', $content, $this->getSecretKey());
-        print "\nHash\n";
-        print $hash;
-        return $hash;
+        return hash_hmac('sha1', $content, $this->getSecretKey());
     }
 }

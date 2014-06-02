@@ -3,16 +3,14 @@
 namespace Acquia\Search\API;
 
 use Acquia\Rest\ServiceManagerAware;
-use Guzzle\Plugin\Md5\CommandContentMd5Plugin;
 use Guzzle\Service\Client;
 use Guzzle\Common\Collection;
-use SebastianBergmann\PHPCPD\CLI\Command;
 
 
 class SearchServiceClient extends Client implements ServiceManagerAware
 {
 
-    const BASE_URL  = 'http://localhost:5000';
+    const BASE_URL  = 'https://api.acquia-search.com';
 
     /**
      * A method used to test whether this class is autoloaded.
@@ -94,7 +92,7 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     /**
      * Returns basic index information for the given index
      *
-     * @return \Acquia\Search\API\Response\Index
+     * @return \Acquia\Search\API\Response\Ping
      *
      * @throws \Guzzle\Http\Exception\ClientErrorResponseException
      */
@@ -103,6 +101,62 @@ class SearchServiceClient extends Client implements ServiceManagerAware
         $request = $this->get('{+base_path}/ping');
         $request->getQuery()->set('id', $this->getConfig('search_identifier'));
         return new Response\Ping($request);
+    }
+
+    /**
+     * Returns the stopwords for a given index
+     *
+     * @return \Acquia\Search\API\Response\Stopwords
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function stopwords()
+    {
+        $request = $this->get('{+base_path}/stopwords');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Stopwords($request);
+    }
+
+    /**
+     * Returns the protwords for a given index
+     *
+     * @return \Acquia\Search\API\Response\Protwords
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function protwords()
+    {
+        $request = $this->get('{+base_path}/protwords');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Protwords($request);
+    }
+
+    /**
+     * Returns the synonyms for a given index
+     *
+     * @return \Acquia\Search\API\Response\Synonyms
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function synonyms()
+    {
+        $request = $this->get('{+base_path}/synonyms');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Synonyms($request);
+    }
+
+    /**
+     * Returns the suggestions for a given index
+     *
+     * @return \Acquia\Search\API\Response\Suggestions
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function suggestions()
+    {
+        $request = $this->get('{+base_path}/suggestions');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Suggestions($request);
     }
 
 }
