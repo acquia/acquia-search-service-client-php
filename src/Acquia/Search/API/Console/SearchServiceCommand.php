@@ -9,8 +9,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SearchServiceCommand extends Command
 {
-    const INDEX_ARGUMENT      = 'indexId';
-    const FILEPATH_ARGUMENT   = 'filepath';
+    const STOPWORDS_ARGUMENT      = 'stopwords';
+    const PROTWORDS_ARGUMENT      = 'protwords';
 
     /**
      * @var \Acquia\Search\API\SearchServiceClient
@@ -82,14 +82,26 @@ class SearchServiceCommand extends Command
     }
 
     /**
-     * @return \Acquia\Search\API\Console\SearchServiceCommand
+     * @return \Acquia\Search\API\SearchServiceCommand
      */
-    public function addFilepathArgument()
+    public function addStopwordsArgument()
     {
         return $this->addArgument(
-            self::FILEPATH_ARGUMENT,
-            InputArgument::REQUIRED,
-            'The path to the configuration file'
+            self::STOPWORDS_ARGUMENT,
+            InputArgument::IS_ARRAY,
+            'The list of stopwords separated with spaces. Eg. a an and are as at be'
+        );
+    }
+
+    /**
+     * @return \Acquia\Search\API\SearchServiceCommand
+     */
+    public function addProtwordsArgument()
+    {
+        return $this->addArgument(
+            self::PROTWORDS_ARGUMENT,
+            InputArgument::IS_ARRAY,
+            'The list of protwords separated with spaces. If you know specialword is tokenized in special and word and you want to prevent this, your word should be added here.'
         );
     }
 }

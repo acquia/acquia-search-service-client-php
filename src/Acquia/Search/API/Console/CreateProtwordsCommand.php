@@ -11,13 +11,15 @@ class CreateProtwordsCommand extends SearchServiceCommand
     {
         $this
             ->setName('protwords:create')
-            ->setDescription('Uploads the protwords.txt file for an index')
+            ->setDescription('Replaces all the words that are protected from stemming. Eg. ')
+            ->addProtwordsArgument()
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createIndexProtwords($payload);
-        #$this->renderJson($output, $response);
+        $protected_words  = $input->getArgument(self::PROTWORDS_ARGUMENT);
+        $response = $this->getSearchServiceClient($output)->createProtwords($protected_words);
+        $this->renderJson($output, $response);
     }
 }

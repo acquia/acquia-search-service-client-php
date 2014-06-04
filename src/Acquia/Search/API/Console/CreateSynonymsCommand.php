@@ -17,7 +17,7 @@ class CreateSynonymsCommand extends SearchServiceCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createIndexSynonyms($payload);
+        #$response = $this->getSearchServiceClient($output)->createSynonyms($payload);
         #$this->renderJson($output, $response);
     }
 }

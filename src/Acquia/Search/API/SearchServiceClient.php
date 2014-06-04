@@ -118,6 +118,39 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     }
 
     /**
+     * Deletes the stopwords for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function deleteStopwords()
+    {
+        $request = $this->delete('{+base_path}/stopwords');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
+     * Adds stopwords for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function createStopwords($stopwords)
+    {
+        if (empty($stopwords) || !is_array($stopwords)) {
+           return new Response\Message("Stopword lists can't be empty");
+        }
+
+        $payload = json_encode(array('stopwords' => $stopwords));
+        $request = $this->post('{+base_path}/stopwords', null, $payload);
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
      * Returns the protwords for a given index
      *
      * @return \Acquia\Search\API\Response\Protwords
@@ -129,6 +162,39 @@ class SearchServiceClient extends Client implements ServiceManagerAware
         $request = $this->get('{+base_path}/protwords');
         $request->getQuery()->set('id', $this->getConfig('search_identifier'));
         return new Response\Protwords($request);
+    }
+
+    /**
+     * Deletes the suggestions for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function deleteProtwords()
+    {
+        $request = $this->delete('{+base_path}/protwords');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
+     * Adds protwords for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function createProtwords($protwords)
+    {
+        if (empty($protwords) || !is_array($protwords)) {
+            return new Response\Message("protword lists can't be empty");
+        }
+
+        $payload = json_encode(array('protwords' => $protwords));
+        $request = $this->post('{+base_path}/protwords', null, $payload);
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
     }
 
     /**
@@ -146,6 +212,20 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     }
 
     /**
+     * Deletes the suggestions for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function deleteSynonyms()
+    {
+        $request = $this->delete('{+base_path}/synonyms');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
      * Returns the suggestions for a given index
      *
      * @return \Acquia\Search\API\Response\Suggestions
@@ -157,6 +237,20 @@ class SearchServiceClient extends Client implements ServiceManagerAware
         $request = $this->get('{+base_path}/suggestions');
         $request->getQuery()->set('id', $this->getConfig('search_identifier'));
         return new Response\Suggestions($request);
+    }
+
+    /**
+     * Deletes the suggestions for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function deleteSuggestions()
+    {
+        $request = $this->delete('{+base_path}/suggestions');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
     }
 
 }

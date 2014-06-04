@@ -115,8 +115,8 @@ class SearchServiceAuthPlugin implements EventSubscriberInterface
         }
 
         // Fix the nonce and add it to the sign string
-        if ($request->hasHeader('X-MAC-Nonce')) {
-            $sign .= $request->getHeader('X-MAC-Nonce') . "\n";
+        if ($request->hasHeader('X-HMAC-Nonce')) {
+            $sign .= $request->getHeader('X-HMAC-Nonce') . "\n";
         } else {
             $nonce = hash('sha1', $this->makeRandomString(256));
             $request->setHeader('X-HMAC-Nonce',$nonce);
@@ -145,7 +145,6 @@ class SearchServiceAuthPlugin implements EventSubscriberInterface
 
         $signature = new Signature($derived_key);
         $hash = $signature->generate($sign);
-
         $request->setHeader('Authorization', "HMAC " . $hash);
 
     }

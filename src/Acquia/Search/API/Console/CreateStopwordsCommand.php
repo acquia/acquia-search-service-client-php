@@ -11,13 +11,15 @@ class CreateStopwordsCommand extends SearchServiceCommand
     {
         $this
             ->setName('stopwords:create')
-            ->setDescription('Uploads the stopwords.txt file for an index')
+            ->setDescription('Generates a stopwords file for the given index')
+            ->addStopwordsArgument()
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createIndexStopwords($payload);
-        #$this->renderJson($output, $response);
+        $stopwords  = $input->getArgument(self::STOPWORDS_ARGUMENT);
+        $response = $this->getSearchServiceClient($output)->createStopwords($stopwords);
+        $this->renderJson($output, $response);
     }
 }

@@ -17,7 +17,7 @@ class CreateSuggestionsCommand extends SearchServiceCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createIndexSuggestions($payload);
+        #$response = $this->getSearchServiceClient($output)->createSuggestions($payload);
         #$this->renderJson($output, $response);
     }
 }
