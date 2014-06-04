@@ -53,6 +53,8 @@ you can remove them by running `php acquia-search-service.phar identity:remove` 
 
     php acquia-search-service.phar ping
 
+    php acquia-search-service.phar stopwords:delete
+    
     php acquia-search-service.phar stopwords:create "a" "the" "an" "your" "you"
 
     php acquia-search-service.phar stopwords
