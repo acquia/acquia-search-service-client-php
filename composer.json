@@ -27,8 +27,8 @@
         "sebastian/phpcpd": "~2.0"
     },
     "autoload": {
-        "psr-0": {
-            "Acquia\\Search\\API": "src/"
+        "psr-4": {
+            "Acquia\\Search\\API\\": "src/"
         }
     },
     "bin": ["bin/acquia-search-service", "bin/acquia-search-service.php"]
