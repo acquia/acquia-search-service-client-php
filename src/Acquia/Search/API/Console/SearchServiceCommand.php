@@ -11,6 +11,8 @@ class SearchServiceCommand extends Command
 {
     const STOPWORDS_ARGUMENT      = 'stopwords';
     const PROTWORDS_ARGUMENT      = 'protwords';
+    const SUGGESTIONS_ARGUMENT    = 'suggestions';
+    const SYNONYMS_ARGUMENT       = 'synonyms';
 
     /**
      * @var \Acquia\Search\API\SearchServiceClient
@@ -89,7 +91,7 @@ class SearchServiceCommand extends Command
         return $this->addArgument(
             self::STOPWORDS_ARGUMENT,
             InputArgument::IS_ARRAY,
-            'The list of stopwords separated with spaces. Eg. a an and are as at be'
+            'The list of stopwords separated with spaces. Eg. "a" "an" "and" "are" "as" "at" "be"'
         );
     }
 
@@ -101,7 +103,31 @@ class SearchServiceCommand extends Command
         return $this->addArgument(
             self::PROTWORDS_ARGUMENT,
             InputArgument::IS_ARRAY,
-            'The list of protwords separated with spaces. If you know specialword is tokenized in special and word and you want to prevent this, your word should be added here.'
+            'The list of protwords separated with spaces. If you know specialword is tokenized in special and word and you want to prevent this, your word should be added here. Example: "specialword" "motorola" "thiswordshouldbeleftalone'
+        );
+    }
+
+    /**
+     * @return \Acquia\Search\API\SearchServiceCommand
+     */
+    public function addSuggestionsArgument()
+    {
+        return $this->addArgument(
+            self::SUGGESTIONS_ARGUMENT,
+            InputArgument::IS_ARRAY,
+            'The list of suggestions separated with spaces. Suggestions are used for pre-populating the auto-complete listings. Scores can be added to certain phrases. Example: "promoted word;1" "another phrase that is fun;2.35"'
+        );
+    }
+
+    /**
+     * @return \Acquia\Search\API\SearchServiceCommand
+     */
+    public function addSynonymsArgument()
+    {
+        return $this->addArgument(
+            self::SYNONYMS_ARGUMENT,
+            InputArgument::IS_ARRAY,
+            'The list of synonyms separated with spaces. Synonyms of each other are formatted with a ; between. Example: "GB;Gigabyte;GiB" "Television;Televisions;TV;TVs"'
         );
     }
 }

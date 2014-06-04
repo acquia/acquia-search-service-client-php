@@ -10,7 +10,7 @@ use Guzzle\Common\Collection;
 class SearchServiceClient extends Client implements ServiceManagerAware
 {
 
-    const BASE_URL  = 'https://api.acquia-search.com';
+    const BASE_URL  = 'http://localhost:5000';
 
     /**
      * A method used to test whether this class is autoloaded.
@@ -141,7 +141,7 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     public function createStopwords($stopwords)
     {
         if (empty($stopwords) || !is_array($stopwords)) {
-           return new Response\Message("Stopword lists can't be empty");
+            throw new \RuntimeException("Stopword lists can't be empty");
         }
 
         $payload = json_encode(array('stopwords' => $stopwords));
@@ -188,7 +188,7 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     public function createProtwords($protwords)
     {
         if (empty($protwords) || !is_array($protwords)) {
-            return new Response\Message("protword lists can't be empty");
+            throw new \RuntimeException("Protected Words list can't be empty");
         }
 
         $payload = json_encode(array('protwords' => $protwords));
@@ -226,6 +226,40 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     }
 
     /**
+     * Adds synonyms for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function createSynonyms($synonyms)
+    {
+        if (empty($synonyms) || !is_array($synonyms)) {
+            throw new \RuntimeException("synonyms lists can't be empty");
+        }
+        $synonyms_payload = array();
+
+        foreach ($synonyms as $synonym_raw) {
+            // source synonyms need to have at least 1 child synonym.
+            $synonym = explode(';', $synonym_raw);
+            if (!isset($synonym[0])) {
+                throw new \RuntimeException("Suggestions input could not be read or parsed. Please check your input.");
+            }
+            if (!isset($synonym[1])) {
+                throw new \RuntimeException('Synonyms that are added need to have at least 1 synonym. Eg. "GB;Gigabyte". Word that we tripped on was ' . $synonym[0]);
+            }
+            $base_synonym = array_pop($synonym);
+
+            $synonyms_payload[] = array($base_synonym => $synonym);
+        }
+
+        $payload = json_encode(array('synonyms' => $synonyms_payload));
+        $request = $this->post('{+base_path}/synonyms', null, $payload);
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
      * Returns the suggestions for a given index
      *
      * @return \Acquia\Search\API\Response\Suggestions
@@ -249,6 +283,39 @@ class SearchServiceClient extends Client implements ServiceManagerAware
     public function deleteSuggestions()
     {
         $request = $this->delete('{+base_path}/suggestions');
+        $request->getQuery()->set('id', $this->getConfig('search_identifier'));
+        return new Response\Message($request);
+    }
+
+    /**
+     * Adds suggestions for a given index
+     *
+     * @return \Acquia\Search\API\Response\Message
+     *
+     * @throws \Guzzle\Http\Exception\ClientErrorResponseException
+     */
+    public function createSuggestions($suggestions)
+    {
+        if (empty($suggestions) || !is_array($suggestions)) {
+            throw new \RuntimeException("Suggestions lists can't be empty");
+        }
+        $suggestions_payload = array();
+
+        foreach ($suggestions as $suggestion_raw) {
+            // suggestions need to have scores.
+            $suggestion = explode(';', $suggestion_raw);
+            // Add the score to 1.0 if score isn't present
+            if (!isset($suggestion[0])) {
+                throw new \RuntimeException("Suggestions input could not be read or parsed. Please check your input.");
+            }
+            if (!isset($suggestion[1])) {
+                $suggestion[1] = "1.0";
+            }
+            $suggestions_payload[] = array('suggestion' => $suggestion[0], 'score' => $suggestion[1]);
+        }
+
+        $payload = json_encode(array('suggestions' => $suggestions_payload));
+        $request = $this->post('{+base_path}/suggestions', null, $payload);
         $request->getQuery()->set('id', $this->getConfig('search_identifier'));
         return new Response\Message($request);
     }

@@ -12,12 +12,14 @@ class CreateSuggestionsCommand extends SearchServiceCommand
         $this
             ->setName('suggestions:create')
             ->setDescription('Uploads the suggestions.txt file for an index')
+            ->addSuggestionsArgument()
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createSuggestions($payload);
-        #$this->renderJson($output, $response);
+        $suggestions  = $input->getArgument(self::SUGGESTIONS_ARGUMENT);
+        $response = $this->getSearchServiceClient($output)->createSuggestions($suggestions);
+        $this->renderJson($output, $response);
     }
 }

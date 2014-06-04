@@ -12,12 +12,14 @@ class CreateSynonymsCommand extends SearchServiceCommand
         $this
             ->setName('synonyms:create')
             ->setDescription('Uploads the synonyms.txt file for an index')
+            ->addSynonymsArgument()
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        #$response = $this->getSearchServiceClient($output)->createSynonyms($payload);
-        #$this->renderJson($output, $response);
+        $synonyms  = $input->getArgument(self::SYNONYMS_ARGUMENT);
+        $response = $this->getSearchServiceClient($output)->createSynonyms($synonyms);
+        $this->renderJson($output, $response);
     }
 }
