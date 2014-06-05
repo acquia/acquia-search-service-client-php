@@ -248,9 +248,12 @@ class SearchServiceClient extends Client implements ServiceManagerAware
             if (!isset($synonym[1])) {
                 throw new \RuntimeException('Synonyms that are added need to have at least 1 synonym. Eg. "GB;Gigabyte". Word that we tripped on was ' . $synonym[0]);
             }
+            if (preg_match('/\s/',$synonym[0])) {
+                throw new \RuntimeException('The Parent Synonym word cannot have spaces');
+            }
             $base_synonym = array_pop($synonym);
 
-            $synonyms_payload[] = array($base_synonym => $synonym);
+            $synonyms_payload += array($base_synonym => $synonym);
         }
 
         $payload = json_encode(array('synonyms' => $synonyms_payload));
