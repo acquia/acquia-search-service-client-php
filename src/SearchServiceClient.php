@@ -10,7 +10,7 @@ use Guzzle\Common\Collection;
 class SearchServiceClient extends Client implements ServiceManagerAware
 {
 
-    const BASE_URL  = 'http://localhost:5000';
+    const BASE_URL  = 'http://api.acquia-search.com';
 
     /**
      * A method used to test whether this class is autoloaded.
