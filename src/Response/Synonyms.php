@@ -9,4 +9,15 @@ class Synonyms extends \Acquia\Rest\Element
      */
     protected $idColumn = 'id';
 
+    /**
+     * @return string
+     */
+    public function to_list() {
+        if (!empty($this['synonyms'])) {
+            $list = implode(PHP_EOL, $this['synonyms']);
+            return $list;
+        }
+        return "";
+    }
+
 }

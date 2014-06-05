@@ -9,4 +9,14 @@ class Stopwords extends \Acquia\Rest\Element
      */
     protected $idColumn = 'id';
 
+    /**
+     * @return string
+     */
+    public function to_list() {
+        if (!empty($this['stopwords'])) {
+            $list = implode(PHP_EOL, $this['stopwords']);
+            return $list;
+        }
+        return "";
+    }
 }

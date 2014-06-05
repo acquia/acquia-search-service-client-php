@@ -9,4 +9,13 @@ class Message extends \Acquia\Rest\Element
      */
     protected $idColumn = 'id';
 
+    /**
+     * @return string
+     */
+    public function message() {
+        return $this['message'];
+    }
+
+
+
 }
