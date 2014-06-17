@@ -16,7 +16,7 @@ class Suggestions extends \Acquia\Rest\Element
         $list = "";
         if (isset($this['suggestions'])) {
             foreach($this['suggestions'] as $suggestion) {
-                $list .= $suggestion['suggestion'] . "\t" . $suggestion['score'] . PHP_EOL;
+                $list .= $suggestion['suggestion'] . ";" . $suggestion['score'] . PHP_EOL;
             }
         }
         return $list;

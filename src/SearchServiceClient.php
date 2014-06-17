@@ -251,7 +251,7 @@ class SearchServiceClient extends Client implements ServiceManagerAware
             if (preg_match('/\s/',$synonym[0])) {
                 throw new \RuntimeException('The Parent Synonym word cannot have spaces');
             }
-            $base_synonym = array_pop($synonym);
+            $base_synonym = array_shift($synonym);
 
             $synonyms_payload += array($base_synonym => $synonym);
         }
