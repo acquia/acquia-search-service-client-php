@@ -14,7 +14,10 @@ class Synonyms extends \Acquia\Rest\Element
      */
     public function to_list() {
         if (!empty($this['synonyms'])) {
-            $list = implode(PHP_EOL, $this['synonyms']);
+            $list = "";
+            foreach ($this['synonyms'] as $synonym_parent => $synonym_childs) {
+                $list .= $synonym_parent . ';' . implode(';', $synonym_childs) . PHP_EOL;
+            }
             return $list;
         }
         return "";
